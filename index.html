@@ -3,375 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mpuza - Home</title>
-   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Mpuza | Pixel Perfect Submission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f3f2ef; color: #1e293b; }
+        
+        .nav-item:hover { color: #2563eb !important; transition: all 0.2s; }
+        .nav-badge { top: -6px; right: -4px; padding: 1px 4px; font-size: 9px; border: 1.5px solid #e53935; }
+
+        .dropdown { position: relative; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            border-radius: 6px;
+            z-index: 100;
+            margin-top: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { color: #475569; padding: 10px 16px; display: block; font-size: 12px; }
+        .dropdown-content a:hover { background-color: #f8fafc; color: #2563eb; }
+    </style>
 </head>
-<body>
-    
-    <nav class="navbar">
-        <div class="navbar-container">
-         
-            <div class="navbar-logo">
-                <h1>Mpuza</h1>
-            </div>
+<body class="antialiased bg-sky-100 ">
 
+   <header class="bg-[#e53935] text-white sticky top-0 z-50 shadow-md h-16">
+        <div class="container mx-auto px-4 h-full flex items-center justify-between">
             
-            <div class="navbar-menu">
-                <div class="nav-item">
-                    <i class="fas fa-users"></i>
-                    <span>My Network</span>
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-extrabold italic tracking-tighter">Mpuza</a>
+            </div>
+            
+            <nav class="flex items-center space-x-4 lg:space-x-7">
+                <a href="#" class="nav-item flex flex-col items-center relative">
+                    <span class="nav-badge absolute bg-[#0073b1] text-white rounded-full font-bold">10+</span>
+                    <i class="fas fa-users text-xl"></i>
+                    <span class="text-[10px] font-medium mt-1">My Network</span>
+                </a>
+                <a href="#" class="nav-item flex flex-col items-center relative">
+                    <span class="nav-badge absolute bg-[#0073b1] text-white rounded-full font-bold">2</span>
+                    <i class="fas fa-graduation-cap text-xl"></i>
+                    <span class="text-[10px] font-medium mt-1">Courses</span>
+                </a>
+                <a href="#" class="nav-item flex flex-col items-center relative">
+                    <span class="nav-badge absolute bg-[#0073b1] text-white rounded-full font-bold">7</span>
+                    <i class="fas fa-bell text-xl"></i>
+                    <span class="text-[10px] font-medium mt-1">Notifications</span>
+                </a>
+                <a href="#" class="nav-item flex flex-col items-center relative">
+                    <span class="nav-badge absolute bg-[#0073b1] text-white rounded-full font-bold">9</span>
+                    <i class="fas fa-briefcase text-xl"></i>
+                    <span class="text-[10px] font-medium mt-1">Job Alerts</span>
+                </a>
+
+                <div class="relative hidden lg:block">
+                    <input type="text" placeholder="Search..." class="w-80 rounded-md bg-white text-slate-900 pl-4 pr-10 py-2.5 text-sm outline-none focus:ring-2 focus:ring-blue-400">
+                    <i class="fas fa-search absolute right-4 top-3.5 text-slate-400 color-blue-700"></i>
                 </div>
-                <div class="nav-item">
-                    <i class="fas fa-book"></i>
-                    <span>Courses</span>
+
+                <div class="dropdown flex flex-col items-center cursor-pointer">
+                    <img src="profile.jpeg" class="w-8 h-8 rounded-full border-2 border-white object-cover shadow-sm">
+                    
+                        <select name="" id="" class="text-[10px] font-bold mt-0.5">
+                            <option value="Me">Me</option>
+                        </select>
+                    
                 </div>
-                <div class="nav-item">
-                    <i class="fas fa-bell"></i>
-                    <span>Notifications</span>
+
+                <a href="#" class="hidden sm:block bg-gray-200 hover:bg-sky-200  px-4 py-2 rounded-full font-bold text-[11px] shadow transition-colors uppercase text-red-500">
+                    Become Refresher
+                </a>
+
+                <div class="dropdown flex flex-col items-center border-l border-white/30 pl-4 cursor-pointer">
+                    <i class="fas fa-th-large text-sm"></i>
+                    <span class="text-[9px] font-bold mt-1">Switch to </span>
+                   <select name="" id="" class="text-[9px] font-bold mt-1">
+                    <option value="Swiich To">Switch To</option>
+                   </select>
                 </div>
-                <div class="nav-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Job Alerts</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 mt-6 grid grid-cols-1 md:grid-cols-12 gap-6 pb-12">
+        
+        <aside class="col-span-1 md:col-span-3 space-y-4 ">
+            <div class=" rounded-xl shadow-sm border border-slate-200 overflow-hidden bg-sky-100">
+                <div class="h-16 bg-[#1a237e]"></div>
+                <div class="p-4 text-center">
+                    <img src="profile.jpeg" class="w-20 h-20 rounded-full mx-auto -mt-12 border-4 border-white object-cover">
+                    <h2 class="font-bold text-lg mt-3">Kalisa Felix</h2>
+                    <p class="text-[11px] text-slate-400 mb-5">Briefly describe who you are</p>
+                    
+                    <div class="mt-4 text-left space-y-3 border-t pt-4 text-[12px]">
+                        <a href="#" class="flex justify-between hover:text-blue-600 transition p-1"><span>My profile viewer</span><span class="font-bold text-blue-600">2</span></a>
+                        <a href="#" class="flex justify-between hover:text-blue-600 transition p-1"><span>Job application</span><span class="font-bold text-blue-600">12</span></a>
+                        <a href="#" class="flex justify-between hover:text-blue-600 transition p-1"><span>Recruiter interviewed</span><span class="font-bold text-blue-600">18</span></a>
+                        <a href="#" class="flex justify-between font-bold text-[#e53935] pt-2 border-t p-1 hover:bg-slate-50"><span>Saved favourite offers</span><span class="text-blue-600">21</span></a>
+                    </div>
                 </div>
             </div>
 
-           
-            <div class="navbar-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search jobs, people, companies...">
+            <div class="bg-sky-100 rounded-xl shadow-sm border border-slate-200 p-5">
+                <h3 class="font-bold text-[11px] text-slate-800 mb-4 uppercase">Company Page Info</h3>
+                <a href="#" class="text-blue-600 text-[11px] font-bold flex items-center mb-5 hover:underline"><i class="fas fa-plus-circle mr-2"></i> Create company page</a>
+                <div class="flex items-center space-x-3 bg-slate-50 p-2 rounded mb-4">
+                    <img src="airtel-logo.png" class="w-8 h-8 object-contain">
+                    <span class="font-bold text-xs">Airtel</span>
+                </div>
+                <div class="space-y-2 text-[11px]">
+                    <a href="#" class="flex justify-between hover:text-blue-600 transition">Page visitors today <span class="text-blue-600 font-bold">18</span></a>
+                    <a href="#" class="flex justify-between hover:text-blue-600 transition">Page followers today <span class="text-blue-600 font-bold">47</span></a>
+                    <a href="#" class="flex justify-between hover:text-blue-600 transition">Applicants show interests <span class="text-blue-600 font-bold">12</span></a>
+                </div>
             </div>
 
-           
-            <div class="navbar-actions">
-                <button class="btn-refresher">Become Refresher</button>
+            <div class="bg-sky-100 rounded-xl shadow-sm border border-slate-200 p-5">
+                <h3 class="font-bold text-[11px] text-slate-800 mb-4 uppercase">Professional Group</h3>
+                <a href="#" class="text-blue-600 text-[11px] font-bold flex items-center hover:underline">
+                    <i class="fas fa-users-cog mr-2"></i> Create new group
+                </a>
+            </div>
+        </aside>
+
+        <div class="col-span-1 md:col-span-6 space-y-5">
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="profile.jpeg" class="w-10 h-10 rounded-full object-cover">
+                    <input type="text" placeholder="Share a skill..." class="bg-slate-100 rounded-full w-full px-5 py-2.5 text-xs outline-none">
+                </div>
+                <div class="flex justify-between items-center text-[11px] text-slate-500 font-medium px-2">
+                    <a href="#" class="hover:text-blue-600"><i class="fas fa-user-plus mr-1"></i> Your Followers</a>
+                    <button class="bg-blue-400 text-white px-8 py-1.5 rounded-full font-bold hover:bg-blue-700">Post</button>
+                    <span>16,000 Jobless</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl shadow-sm border-t-4 border-[#e53935] p-6 flex flex-col items-center justify-between text-center min-h-[200px]">
+                    <img src="airtel-logo.png" class="h-10 object-contain mb-2">
+                    <div><h4 class="text-[10px] font-bold">Airtel Rwanda</h4><p class="text-[9px] text-slate-400">Net & System Admin</p></div>
+                    <a href="#" class="bg-blue-400 text-white text-[9px] py-2 px-4 rounded font-bold w-full hover:bg-blue-700">Urgent Hiring!</a>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center justify-between text-center min-h-[200px]">
+                    <img src="tapela-logo.png" class="h-10 object-contain mb-2">
+                    <div><h4 class="text-[10px] font-bold">Twapela</h4><p class="text-[9px] text-slate-400">ML Engineer</p></div>
+                    <a href="#" class="bg-blue-400 text-white text-[9px] py-2 px-4 rounded font-bold w-full hover:bg-blue-700">Urgent Hiring!</a>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center justify-between text-center min-h-[200px]">
+                    <img src="mpuza-logo.png" class="h-10 object-contain mb-2">
+                    <div><h4 class="text-[10px] font-bold">Mpuza, Inc.</h4><p class="text-[9px] text-slate-400">Legal Officer</p></div>
+                    <a href="#" class="bg-blue-400 text-white text-[9px] py-2 px-4 rounded font-bold w-full hover:bg-blue-700">Urgent Hiring!</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-40 h-8 bg-sky-400 rounded-md"></div>
+                    <a href="#" class="text-blue-500 text-[11px] font-bold"><i class="fas fa-user-plus mr-1"></i> Follow</a>
+                </div>
+                <div class="flex justify-between">
+                    <ul class="space-y-2 text-[11px] font-medium text-slate-700">
+                        <li><i class="far fa-dot-circle mr-2"></i> 3 Vacant Positions</li>
+                        <li><i class="far fa-dot-circle mr-2"></i> 1 Year of Experience</li>
+                    </ul>
+                    <div class="flex space-x-3 text-center">
+                        <div><span class="block font-bold text-red-500 text-xs">04</span><span class="text-[8px] text-slate-400 uppercase">Days</span></div>
+                        <div><span class="block font-bold text-red-500 text-xs">08</span><span class="text-[8px] text-slate-400 uppercase">Hours</span></div>
+                        <div><span class="block font-bold text-red-500 text-xs">44</span><span class="text-[8px] text-slate-400 uppercase">Minutes</span></div>
+                    </div>
+                </div>
+                <div class="border-t mt-4 pt-3 flex justify-between items-center text-[11px] text-slate-400">
+                    <div class="flex items-center text-red-500"><i class="fas fa-heart mr-1"></i> Comment</div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-600"><i class="fas fa-share mr-1"></i> Share</a>
+                        <a href="#" class="hover:text-blue-600"><i class="far fa-star mr-1"></i> Favourite</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-700 font-bold"><i class="fas fa-leaf"></i></div>
+                        <div><h4 class="font-bold text-sm">One Acre Fund <i class="fas fa-check-circle text-blue-400 text-[10px]"></i></h4><p class="text-[10px] text-slate-400">3 Vacant Positions • 1 Year of Exp</p></div>
+                    </div>
+                    <a href="#" class="text-blue-600 text-[11px] font-bold border border-blue-600 px-5 py-1 rounded-full hover:bg-blue-600 hover:text-white transition">+ Follow</a>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed mb-6">Bachelor Degree in Software Engineering...</p>
+                <div class="flex justify-between items-center text-[11px] text-slate-400 border-t pt-4">
+                    <a href="#" class="hover:text-blue-600"><i class="far fa-thumbs-up mr-2"></i> Like</a>
+                    <a href="#" class="hover:text-blue-600"><i class="far fa-comment-alt mr-2"></i> Comment</a>
+                    <a href="#" class="hover:text-blue-600"><i class="fas fa-share mr-2"></i> Share</a>
+                    <a href="#" class="hover:text-blue-600"><i class="far fa-star mr-2"></i> Favourite</a>
+                </div>
             </div>
         </div>
-    </nav>
 
-    
-    <div class="main-container">
-        
-        <aside class="sidebar-left">
-            <!-- Profile Card -->
-            <div class="card profile-card">
-                <div class="profile-header">
-                    <img src="profile.jpeg" alt="Profile" class="profile-img">
-                    <h3>John Doe</h3>
-                    <p class="profile-subtitle">Software Developer</p>
+       <aside class="col-span-1 md:col-span-3">
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden sticky top-20 flex flex-col max-h-[85vh]">
+                <div class="bg-sky-500 p-3 flex items-center text-white shrink-0">
+                    <i class="fas fa-star mr-2 text-sm"></i><h3 class="font-bold text-[10px] uppercase">Favourited Jobs</h3>
                 </div>
-                <div class="profile-menu">
-                    <div class="menu-item">
-                        <i class="fas fa-user"></i>
-                        <span>My profile</span>
+                
+                <div class="p-5 custom-scroll overflow-y-auto">
+                    <p class="text-[9px] text-slate-400 mb-4 leading-tight">Click on interested Job Favourite icon to save it here for quick access.</p>
+                    
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <img src="airtel-logo.png" class="w-5 h-5 object-contain">
+                            <div class="leading-none">
+                                <span class="text-[10px] font-bold text-slate-700 block">Airtel Rwanda</span>
+                                <span class="text-[8px] text-slate-400 uppercase italic">Telecommunication</span>
+                            </div>
+                        </div>
+                        <button class="text-slate-300 hover:text-red-500"><i class="fas fa-times text-xs"></i></button>
                     </div>
-                    <div class="menu-item">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Job application</span>
-                    </div>
-                    <div class="menu-item">
-                        <i class="fas fa-bookmark"></i>
-                        <span>Saved jobs</span>
-                    </div>
-                </div>
-            </div>
 
-            
-            <div class="card company-info-card">
-                <h4>Company Page Info</h4>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">245</span>
-                        <span class="stat-label">Followers</span>
+                    <h2 class="text-sm font-black leading-tight mb-4">Network & System Administrator [Full-Time]</h2>
+                    
+                    <div class="grid grid-cols-3 gap-2 text-center mb-6 bg-slate-50 p-2 rounded-lg border border-slate-100">
+                        <div><span class="block font-black text-xs text-red-500">04</span><span class="text-[7px] text-slate-400 uppercase">Days</span></div>
+                        <div><span class="block font-black text-xs text-red-500">08</span><span class="text-[7px] text-slate-400 uppercase">Hours</span></div>
+                        <div><span class="block font-black text-xs text-red-500">44</span><span class="text-[7px] text-slate-400 uppercase">Mins</span></div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">89</span>
-                        <span class="stat-label">Following</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">1.2K</span>
-                        <span class="stat-label">Connections</span>
-                    </div>
-                </div>
-            </div>
 
-          
-            <div class="card professional-group-card">
-                <h4>Professional Group</h4>
-                <div class="group-list">
-                    <div class="group-item">
-                        <div class="group-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="group-info">
-                            <p class="group-name">Web Developers</p>
-                            <p class="group-members">2.5K members</p>
-                        </div>
-                    </div>
-                    <div class="group-item">
-                        <div class="group-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="group-info">
-                            <p class="group-name">Data Scientists</p>
-                            <p class="group-members">1.8K members</p>
+                    <div class="space-y-4 text-[11px]">
+                        <div><h4 class="font-bold text-slate-800">Job Description</h4><p class="text-slate-500 mt-1">This job will be based in Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p></div>
+                        <div><h4 class="font-bold text-slate-800">Number of Positions</h4><ul class="list-disc ml-4 text-slate-500"><li>Lorem ipsum dolor sit amet</li></ul></div>
+                        <div><h4 class="font-bold text-slate-800">Direct Supervisor</h4><ul class="list-disc ml-4 text-slate-500"><li>Lorem ipsum dolor sit amet</li></ul></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Duties and Responsibilities</h4>
+                            <ul class="list-disc ml-4 text-slate-500 space-y-1">
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="group-item">
-                        <div class="group-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div class="group-info">
-                            <p class="group-name">UI/UX Designers</p>
-                            <p class="group-members">3.2K members</p>
-                        </div>
-                    </div>
+
+                    <a href="#" class="block w-full text-center bg-blue-400 text-white py-3.5 rounded-lg font-bold uppercase text-[10px] hover:bg-blue-700 transition mt-8 shadow-lg shadow-red-100">Apply Now</a>
                 </div>
             </div>
         </aside>
 
-        
-        <main class="main-content">
-            
-            <div class="card post-card">
-                <div class="post-input">
-                    <img src="profile.jpg" alt="User" class="post-avatar">
-                    <input type="text" placeholder="What's on your mind?">
-                    <button class="btn-post">Post</button>
-                </div>
-            </div>
+    </main>
 
-            
-            <div class="small-jobs-container">
-                <div class="card small-job-card">
-                    <img src="airtel-logo.png" alt="Airtel" class="company-logo-small">
-                    <h5>Airtel Rwanda</h5>
-                    <p class="job-title-small">Marketing Manager</p>
-                    <button class="btn-urgent">Urgent Hiring</button>
-                </div>
-                <div class="card small-job-card">
-                    <img src="tapela-logo.png" alt="Tapela" class="company-logo-small">
-                    <h5>Tapela</h5>
-                    <p class="job-title-small">Frontend Developer</p>
-                    <button class="btn-urgent">Urgent Hiring</button>
-                </div>
-                <div class="card small-job-card">
-                    <img src="mpuza-logo.png" alt="Mpuza" class="company-logo-small">
-                    <h5>Mpuza Inc.</h5>
-                    <p class="job-title-small">Product Designer</p>
-                    <button class="btn-urgent">Urgent Hiring</button>
-                </div>
-            </div>
-
-            
-            <div class="card job-post-card">
-                <div class="job-header">
-                    <img src="airtel-logo.png" alt="Airtel Rwanda" class="company-logo">
-                    <div class="job-info">
-                        <h4>Senior Software Engineer</h4>
-                        <p class="company-name">Airtel Rwanda</p>
-                    </div>
-                </div>
-                <div class="job-details">
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Kigali, Rwanda</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Full-time</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <span>Negotiable</span>
-                    </div>
-                </div>
-                <div class="job-actions">
-                    <button class="action-btn">
-                        <i class="fas fa-user-plus"></i>
-                        Follow
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-heart"></i>
-                        Like
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-comment"></i>
-                        Comment
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-share"></i>
-                        Share
-                    </button>
-                </div>
-            </div>
-
-           
-            <div class="card job-post-card">
-                <div class="job-header">
-                    <img src="tapela-logo.png" alt="Tapela" class="company-logo">
-                    <div class="job-info">
-                        <h4>Digital Marketing Specialist</h4>
-                        <p class="company-name">Tapela</p>
-                    </div>
-                </div>
-                <div class="job-details">
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Kigali, Rwanda</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Part-time</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <span>$800-1200</span>
-                    </div>
-                </div>
-                <div class="job-actions">
-                    <button class="action-btn">
-                        <i class="fas fa-user-plus"></i>
-                        Follow
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-heart"></i>
-                        Like
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-comment"></i>
-                        Comment
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-share"></i>
-                        Share
-                    </button>
-                </div>
-            </div>
-
-            
-            <div class="card job-post-card">
-                <div class="job-header">
-                    <img src="mpuza-logo.png" alt="Mpuza Inc." class="company-logo">
-                    <div class="job-info">
-                        <h4>Data Analyst</h4>
-                        <p class="company-name">Mpuza Inc.</p>
-                    </div>
-                </div>
-                <div class="job-details">
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Kigali, Rwanda</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Full-time</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <span>Competitive</span>
-                    </div>
-                </div>
-                <div class="job-actions">
-                    <button class="action-btn">
-                        <i class="fas fa-user-plus"></i>
-                        Follow
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-heart"></i>
-                        Like
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-comment"></i>
-                        Comment
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-share"></i>
-                        Share
-                    </button>
-                </div>
-            </div>
-        </main>
-
-        <aside class="sidebar-right">
-            <div class="card favourite-jobs-card">
-                <h4>Favourite Jobs</h4>
-                <div class="favourite-stats">
-                    <div class="fav-stat">
-                        <i class="fas fa-bookmark"></i>
-                        <div>
-                            <p class="fav-number">15</p>
-                            <p class="fav-label">Saved</p>
-                        </div>
-                    </div>
-                    <div class="fav-stat">
-                        <i class="fas fa-paper-plane"></i>
-                        <div>
-                            <p class="fav-number">8</p>
-                            <p class="fav-label">Applied</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card ad-card">
-                <h5>Featured</h5>
-                <img src="profile.jpg" alt="Advertisement" class="ad-image">
-                <p class="ad-text">Boost your career with our premium courses</p>
-                <button class="btn-ad">Learn More</button>
-            </div>
-
-           
-            <div class="card job-details-card">
-                <h4>Job Details</h4>
-                <h5 class="job-title-detail">UX/UI Designer</h5>
-                
-                
-                <div class="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-number">05</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number">14</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number">32</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                </div>
-
-               
-                <div class="detail-section">
-                    <h6>Job Description</h6>
-                    <p>We are looking for a talented UX/UI Designer to create amazing user experiences. The ideal candidate should have an eye for clean design and possess superior user interface skills.</p>
-                </div>
-
-                
-                <div class="detail-section">
-                    <h6>Qualifications</h6>
-                    <ul>
-                        <li>Bachelor's degree in Design or related field</li>
-                        <li>3+ years of UX/UI design experience</li>
-                        <li>Proficiency in Figma, Sketch, Adobe XD</li>
-                        <li>Strong portfolio of design projects</li>
-                    </ul>
-                </div>
-
-                <div class="detail-section">
-                    <h6>Experience</h6>
-                    <ul>
-                        <li>Proven experience as UX/UI Designer</li>
-                        <li>Experience with responsive design</li>
-                        <li>Understanding of user-centered design</li>
-                    </ul>
-                </div>
-
-                <button class="btn-apply">Apply Now</button>
-            </div>
-        </aside>
-    </div>
 </body>
 </html>
